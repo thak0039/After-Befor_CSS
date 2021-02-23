@@ -5,6 +5,9 @@
     /* font-family: 'Fredoka One', cursive; */
 }
 
+
+/*  After Befor Effects */
+
 h1 {
     text-align: center;
     margin-top: 2rem;
@@ -101,6 +104,7 @@ h1 {
     width: 600px;
     background-color: rgb(36, 145, 45);
     position: relative;
+    overflow: hidden;
 }
 
 .iconanimation::before {
@@ -109,7 +113,7 @@ h1 {
     color: white;
     text-align: center;
     height: 0;
-    width: 600px;
+    width: 700px;
     background-color: rgb(10, 14, 10);
     position: absolute;
     left: 0;
@@ -124,9 +128,61 @@ h1 {
     height: 100%;
     content: 'Hey This is Ottawa where I am living';
     font-weight: 900;
+    line-height: 250px;
 }
 
 .me-pinki {
     height: 500px;
-    width: 600px;
+    margin: auto;
+}
+
+
+/* Text Box Effects */
+
+.input-field {
+    position: relative;
+    width: 250px;
+    height: 44px;
+    line-height: 44px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #d3d3d3;
+    box-shadow: none;
+}
+
+label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #d3d3d3;
+    transition: 0.2s;
+    cursor: text;
+}
+
+input:focus~label {
+    font-size: 14px;
+    top: -24px;
+    color: #00dd22;
+}
+
+span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    border-bottom: 2px solid #230b8b;
+    transition: 0.8s;
+}
+
+input:focus~span {
+    left: 0;
+    width: 100%;
 }
