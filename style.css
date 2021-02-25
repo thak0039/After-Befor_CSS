@@ -148,7 +148,7 @@ h1 {
     margin-top: 5%;
 }
 
-input {
+input[type="text"] {
     width: 100%;
     border: 0;
     outline: 0;
@@ -167,13 +167,13 @@ label {
     cursor: text;
 }
 
-input:focus~label {
+input[type="text"]:focus~label {
     font-size: 14px;
     top: -24px;
     color: #00dd22;
 }
 
-span {
+.move-border {
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -182,7 +182,62 @@ span {
     transition: 0.8s;
 }
 
-input:focus~span {
+input:focus~.move-border {
     left: 0;
     width: 100%;
+}
+
+.input-group {
+    position: relative;
+    width: 250px;
+    height: 40px;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.input-big {
+    width: 100%;
+    outline: 0;
+    line-height: 100%;
+    border: 0;
+    padding: 0.5rem 0.5rem;
+    border-bottom: 2px solid #d3d3d3;
+    /* border: 0; */
+}
+
+.move-size {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    transition: 0.8s;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.input-big:focus {
+    border-bottom: none;
+}
+
+.input-big:focus~.move-size {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #00dd22;
+}
+
+.input-effect5 {
+    width: 100%;
+    outline: 0;
+    line-height: 100%;
+    border: none;
+    border-bottom: 2px solid #d3d3d3;
+    padding: 0.5rem 0.5rem;
+    transition: 0.4s;
+}
+
+.input-effect5:focus {
+    outline: 3px solid red;
+    outline-offset: 20px;
+    border-bottom: none;
 }
